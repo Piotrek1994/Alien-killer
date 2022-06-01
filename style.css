@@ -17,16 +17,13 @@ body {
 }
 
 .instruction {
-    position: absolute;
-    width: 150px;
-	height: 150px;
+    width: 300px;
+	height: 300px;
     background-image: url('./assets/game-instruction.png');
 	background-position: center; 
 	background-repeat: no-repeat; 
 	background-size: cover;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
+
     
 }
 
@@ -36,22 +33,22 @@ body {
     display: flex;
     font-family: 'Luckiest Guy', cursive;
     color: white;
-    font-size: 30px;
+    font-size: 50px;
 }
 
 
 
 .grid {
-	width: 300px;
-	height: 300px;
+	width: 600px;
+	height: 600px;
 	border: solid white 1px;
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .grid div {
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 }
 
 .invader {
@@ -92,4 +89,42 @@ body {
 
 .hide {
     display: none;
+}
+
+.buttons {
+    display: flex;    
+    flex-direction: column;
+    width: 100px;
+    margin-left: 30px;
+
+     
+
+    
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: 'Luckiest Guy', cursive;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.mode {
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.easy:hover {
+    background-color: rgb(0, 255, 136);
+}
+
+.medium:hover {
+    background-color: yellow;
+}
+.hard:hover {
+    background-color: red;
 }

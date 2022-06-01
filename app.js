@@ -1,6 +1,12 @@
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')
 const score = document.querySelector('.score__point')
+
+const easyMode = document.querySelector('.easy')
+const mediumMode = document.querySelector('.medium')
+const hardMode = document.querySelector('.hard')
+
+
 let currentShooterIndex = 202
 let width = 15
 let direction = 1
@@ -12,14 +18,14 @@ const audio = new Audio('audio.mp3')
 const button = document.querySelector('button')
 const victory = new Audio('victory.mp3')
 const lose = new Audio('lose.mp3')
+let mode = 99
 
-document.addEventListener('keydown', (e) => {
-  switch (e.keyCode) {
-      case 38:
-        audio.play()
-        break;
-  }
-})
+
+
+
+
+
+
 
 
 for (let i = 0; i < 225; i++) {
@@ -96,6 +102,7 @@ function moveInvaders() {
   draw()
 
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
+    score.classList.add('hide')
     resultsDisplay.innerHTML = 'GAME OVER'
     lose.play()
     clearInterval(invadersId)
@@ -103,6 +110,7 @@ function moveInvaders() {
 
   for (let i = 0; i < alienInvaders.length; i++) {
     if(alienInvaders[i] > (squares.length)) {
+     score.classList.add('hide')
       resultsDisplay.innerHTML = 'GAME OVER'
       lose.play()
       clearInterval(invadersId)
@@ -116,9 +124,32 @@ function moveInvaders() {
     clearInterval(invadersId)
   }
 }
-invadersId = setInterval(moveInvaders, 600)
+
+
+
+
+const easyModeFn = () => {
+    mode = 500
+    invadersId = setInterval(moveInvaders, mode)
+}
+const mediumModeFn = () => {
+    mode = 200
+    invadersId = setInterval(moveInvaders, mode)
+}
+const hardModeFn = () => {
+    mode = 100
+    invadersId = setInterval(moveInvaders, mode)
+}
+
+
+
+
+
 
 function shoot(e) {
+    if(mode === 99){
+        return
+    } else {
   let laserId
   let currentLaserIndex = currentShooterIndex
   function moveLaser() {
@@ -131,6 +162,9 @@ function shoot(e) {
       squares[currentLaserIndex].classList.remove('invader')
       squares[currentLaserIndex].classList.add('boom')
 
+
+
+      
       setTimeout(()=> squares[currentLaserIndex].classList.remove('boom'), 300)
       clearInterval(laserId)
 
@@ -149,4 +183,37 @@ function shoot(e) {
   }
 }
 
+
+document.addEventListener('keydown', (e) => {
+    switch (e.keyCode) {
+        case 38:
+          audio.play()
+          break;
+    }
+  })
+
+}
+
+
+
+
 document.addEventListener('keydown', shoot)
+
+
+
+
+
+
+
+easyMode.addEventListener('click', easyModeFn)
+mediumMode.addEventListener('click', mediumModeFn)
+hardMode.addEventListener('click', hardModeFn)
+
+
+
+
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
