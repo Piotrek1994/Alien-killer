@@ -1,28 +1,95 @@
-.grid {
-    width: 300px;
-    height: 300px;
-    border: solid black 1px;
+body {
+	background-image: url('./assets/bacground.jpg');
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+    z-index: -3;
+
+}
+
+
+.container {
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.grid div {
-    width: 20px;
-    height: 20px;
-
-}
-
-.invader {
-    background-color: green;
-    border-radius: 10px;
-}
-
-.shooter {
-    background-color: red;
+.instruction {
+    position: absolute;
+    width: 150px;
+	height: 150px;
+    background-image: url('./assets/game-instruction.png');
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
     
 }
 
+.score {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+
+
+.grid {
+	width: 300px;
+	height: 300px;
+	border: solid white 1px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid div {
+	width: 20px;
+	height: 20px;
+}
+
+.invader {
+	width: 10px;
+	height: 10px;
+	background-image: url('./assets/game.png');
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+
+.shooter {
+	width: 10px;
+	height: 10px;
+	background-image: url('./assets/Goodstuff-No-Nonsense-Free-Space-Space-shuttle.ico');
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+
 .laser {
-    background-color: black;
+	width: 10px;
+	height: 10px;
+	background-image: url('./assets/SpaceInvadersLaserDepiction.png');
+	background-position: center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.boom {
+    width: 10px;
+	height: 10px;
+	background-image: url('./assets/boom.png');
+	background-position: center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hide {
+    display: none;
 }
