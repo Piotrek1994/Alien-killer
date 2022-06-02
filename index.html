@@ -5,35 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/Toicon-icon-fandom-game.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>My Game</title>
 </head>
 
 <body>
 
-    
+  
 
+
+    <div class="score">
+        <p class="score__point">Score&nbsp</p>
+        <p class="results">0</p>
+    </div>
     <div class="container">
-        <div class="score">
-            <p class="score__point">Score&nbsp</p>
-            <p class="results">0</p>
-        </div>
+        
         <div class="grid">
         </div>
     
-        <div class="buttons">
-            <p class="mode">CHOOSE MODE:</p>
-    <button class="easy">Easy</button>
-    <button class="medium">Medium</button>
-    <button class="hard">Hard</button>
+        <div class="btns"> 
+            <p class="mode">CHOOSE MODE</p>
+            <button class="btn easy"><span>EASY</span></button>
+            <button class="btn medium">MEDIUM</button>
+            <button class="btn hard">HARD</button>
+            <button class="btn rest">RESET</button>
+            <div class="instruction"></div>
+        </div>
+
+
+
+
 </div>
 
-<div class="instruction"></div>
-</div>
+
+
 
 
     <script src="app.js"></script>
