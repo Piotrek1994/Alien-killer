@@ -1,6 +1,6 @@
 # Space game
 
-## Game in which you have to shoot all invaders to win.
+## Game in which you have to shoot all invaders to win. You can choose mode that you will be playing. New features like random movment of invadors, and shooting by them, incomming. 
 
 ###### To create this game I use JavaScript and I styled it with SASS.
 
