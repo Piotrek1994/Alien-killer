@@ -4,6 +4,6 @@
 
 ###### To create this game I use JavaScript and I styled it with SASS.
 
-Video 
-https://user-images.githubusercontent.com/93721640/171800635-d94de9c6-c8ce-4fd1-8fd2-5e63ae86f726.mp4
+
+https://user-images.githubusercontent.com/93721640/171801369-ff47f2d6-a17f-4a1d-834d-6f80c51421e7.mp4
 
